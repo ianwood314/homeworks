@@ -1,6 +1,6 @@
 # Homework02
 
-## Assignment Objectives
+## Homework Objectives
 * Familiarize students with common data frameworks, such as JSON
 * Cultivate good writing and documentation skills through README files to ensure students can effectively communicate their project and its importance to others
 * Reinforce basic programming skills in Python 
