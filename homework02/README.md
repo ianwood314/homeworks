@@ -24,7 +24,7 @@ This homework contains two Python scripts.
 
 ## How to Run the Code
 Run the following lines of code:
-1.**Generate and Visualize the sample data**
+1. **Generate and Visualize the sample data**
 `python3 generate_meteor_data.py` to execute the script
 `cat meteor_site_data.json` to visualize the sample data created from the last code
 2. **Run the Simulation**
