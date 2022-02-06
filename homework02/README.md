@@ -25,12 +25,12 @@ This homework contains two Python scripts.
 ## How to Run the Code
 Run the following lines of code:
 1. **Generate and Visualize the sample data**
-`python3 generate_meteor_data.py` to execute the script
-`cat meteor_site_data.json` to visualize the sample data created from the last code
+    - `python3 generate_meteor_data.py` to execute the script
+    - `cat meteor_site_data.json` to visualize the sample data created from the last code
 2. **Run the Simulation**
-`python3 simulate_rover_mission.py` to execute the script
-3. Interpret the Results
-**Sample Output**
+    - `python3 simulate_rover_mission.py` to execute the script
+3. **Interpret the Results** <br />
+Sample Output:
 ```
 Site #1: time to travel = 3.64 hr, time to sample = 3.00 hr
 Site #2: time to travel = 5.79 hr, time to sample = 2.00 hr
@@ -40,4 +40,10 @@ Site #5: time to travel = 7.46 hr, time to sample = 2.00 hr
 =========================
 Number of Sites Visted = 5, total mission time: 44.17 hrs
 ```
-Looking at Site #1 from the sample output, we can see it took the rover about 3.62 hours to travel from its starting location to the first site and it look 3.00 hours to sample the meteor at Site #1. Similarly, for Site #2, we can see that it took the rover 5.79 hours to travel from Site #1 to Site #2 and 2.00 hours to sample the meteor at the site. At the bottom of the sample output, we can see the total number of sites visted by the rover and the total amount of time it took the rover to travel to and sample all the sites.
+The first five lines of the output share a similar format. 
+First, `Site #` tells which meteor site the rover is at.
+Second, `time to travel` gives the amount of time it took the rover to travel to the site.
+Lastly, `time to sample` gives the amount of time it took the rover to sample the meteor at the site.
+The last last line of the output tells how many sites the rover visited as well as the total amount of time it took the rover to travel to and sample all the meteor sites.
+For example, looking at Site #1 from the sample output, we can see it took the rover about 3.64 hours to travel from its starting location to the first site and about 3.00 hours to sample the meteor at Site #1. Similarly for Site #2, it took the rover about 5.79 hours to travel from Site #1 to Site #2 and 2.00 hours to sample the meteor at the second site. 
+In the final line of the sample output, we can see the rover visted a total of five sites and spent a total of 44.17 hours traveling to and sampling all the meteor sites.
