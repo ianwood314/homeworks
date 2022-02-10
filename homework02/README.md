@@ -1,4 +1,4 @@
-# Homework02
+# Homework02: Martian Meteor Site Data Analysis
 
 ## Homework Objectives
 * Familiarize students with common data frameworks, such as JSON
