@@ -72,7 +72,7 @@ Run the following lines of code in a terminal:
         ...
       ```
 2. **Execute the main script**
-    - Type `./water_quality.py` to execute the script
+    - Type `python3 water_quality.py` to execute the script
 3. **Interpret the results** <br />
   Sample output 1:
     ```
