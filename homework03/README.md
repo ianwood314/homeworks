@@ -92,7 +92,7 @@ Run the following lines of code in a terminal:
     Minimum time required to return below a safe threshold is 7.08 hr
     ```
     Similar to Sample output 1, the first line of sample output 2 provides the average turbidity of the last five water sample measurements in the dataset,
-    we can see is 1.139 NTU.
+    we can see is 1.1539 NTU.
     The second line provides a warning message this time letting the user know the water is not safe for use because the average turbidity is above the threshold.
     The last line again provides the minimum amount of time for the water to return below the safe treshold. From the sample output, we can see that the 
     minimum time is 7.08 hrs.
