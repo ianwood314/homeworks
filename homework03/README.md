@@ -74,7 +74,7 @@ Run the following lines of code in a terminal:
 2. **Execute the main script**
     - Type `python3 water_quality.py` to execute the script
 3. **Interpret the results** <br />
-  Sample output 1:
+  **Sample output 1:**
     ```
     Average turbidity based on five most recent measurements = 0.6888 NTU
     INFO:root:Water quality is safe for use. Turbidity is below the threshold.
@@ -84,8 +84,8 @@ Run the following lines of code in a terminal:
     we can see that the average turbidity was 0.6888 NTU.
     The second line provides an info message letting the user know that the water is safe for use because the the average turbidity is below the threshold.
     The last line provides the minimum amount of time for the water to return below the safe treshold. From the sample output, we can see that the minimum time
-    is 0.00 hrs.
-  Sample output 2:
+    is 0.00 hrs. <br />
+  **Sample output 2:**
     ```
     Average turbidity based on five most recent measurements = 1.1539 NTU
     WARNING:root:Water quality is not safe for use. Turbidity is above threshold.
