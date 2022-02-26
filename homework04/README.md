@@ -1,6 +1,6 @@
 # Marsian Meteorite Landing Data Anaylsis
 
-We have collected meteorite data from the Marsian surface. This repository contains scripts to analyize the average mass, location, and class of these sampled meteors. You can either use the data we have provided or use your own data.
+We have collected meteorite data from the Marsian surface. This homework contains scripts that analyize the average mass, location, and class of these sampled meteors. You can either use the data we have provided or use your own data.
 
 ## Homework Objective
 * Familiarize students with common docker commands such as pull, build, and run
@@ -13,7 +13,7 @@ We have collected meteorite data from the Marsian surface. This repository conta
       - The number of meteors found in each quandrant (Northern & Eastern, Northern & Western, Southern & Eastern, Southern & Western)
         - If a quandrant does not appear in the output, then the number of meteors found in that quadrant was zero
       - The number of meteors found belonging to each individual class
-3. `test_ml_data_analysis.py`: Tests the various functions in the previous script to ensure they are calcuating correct values and handling errors appropriately
+3. `test_ml_data_analysis.py`: Tests the various functions in the previous script to ensure they calculate correct values and handle errors appropriately
 
 ## How to Run the Pre-built Code
 Run the following commands in a terminal:
@@ -73,12 +73,50 @@ Run the following commands in a terminal:
             ...
         ```
        - Additional data is also available for download using the command below: <br />
-         `curl https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json --output <filename>.json` (remember to replace with the filename of your choosing)
+         `curl https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json --output <filename>.json` (remember to replace with a filename of your choosing)
   5. Run the containerized code using user-provided data
       - `docker run --rm -v $PWD:/data <username>/ml_data_analysis:<tag> ml_data_analysis.py /data/<filename>.json` (again, remember to replace with your own username and input data filename)
 
 ## How to Run the Test Suite with pytest
-  1. 
+  1. Run the suite interactively
+      - `docker run --rm -it ianwood314/ml_data_analysis:hw04 /bin/bash` to start an interactive shell inside the container
+      - `cd /code` to change directory to where the test script is
+      - Type `ls` in your terminal to make sure `test_ml_data_analysis.py` is in the `/code` directory. You should see the following:
+        ```
+        [root@d53048058a98 code]# ls
+        ml_data_analysis.py  test_ml_data_analysis.py
+        ```
+      - Type `pytest` in the terminal. You should see the following output if the tests ran successfully:
+        ```
+        ============================== test session starts ==============================
+        platform linux -- Python 3.6.8, pytest-7.0.0, pluggy-1.0.0
+        rootdir: /code
+        collected 4 items
+
+        test_ml_data_analysis.py ....                                              [100%]
+
+        ============================== 4 passed in 0.03s ================================
+        ```
 
 ## Interpret the Results
+**Sample Output**
+```
+Summary data following meteorite analysis:
 
+Average mass of 30 meteor(s):
+   83857.3 grams
+
+Hemisphere summary data:
+   There were 21 meteors found in the Northern & Eastern quadrant
+   There were 6 meteors found in the Northern & Western quadrant
+   There were 3 meteors found in the Southern & Western quadrant
+
+Class summary data:
+   Found class L5              1 times
+   Found class H6              1 times
+   Found class EH4             2 times
+   Found class Acapulcoite     1 times
+   Found class L6              6 times
+   ...
+```
+From the sample output above, we can see that there are three main sections: average mass, hemisphere summary, and class summary. First, the average mass section provides the number of meteors in the data set. Underneath, it provides the average mass of those meteors in grams. For example, we can see from the sample output that 30 meteors were analyized in the sample data the average mass was 83857.3 grams. Second, the hemisphere summary section provides the number of meteors from the data set that were found in each of the four quadrants: Northern & Eastern, Northern & Western, Southern & Eastern, Southern & Western. From the sample output, we can see that there were 21 meteors found in the Northern & Eastern quadrant. Note that in the sample output, there is not a label for Southern & Eastern. This means that zero meteors were found in that quadrant. Lastly, the class summary section details the number of meteors belonging to each class. From the sample output, we can see that 6 meteors were found beloning to the L6 class.
