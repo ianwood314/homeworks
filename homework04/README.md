@@ -93,9 +93,9 @@ Run the following commands in a terminal:
         rootdir: /code
         collected 4 items
 
-        test_ml_data_analysis.py ....                                              [100%]
+        test_ml_data_analysis.py ......                                              [100%]
 
-        ============================== 4 passed in 0.03s ================================
+        ============================== 6 passed in 0.03s ================================
         ```
 
 ## Interpret the Results
