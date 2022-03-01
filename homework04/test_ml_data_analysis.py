@@ -1,6 +1,7 @@
 import pytest
 from ml_data_analysis import compute_average_mass
 from ml_data_analysis import check_hemisphere
+from ml_data_analysis import count_classes
 
 def test_compute_average_mass():
     assert compute_average_mass([{'a': 1}], 'a') == 1.
@@ -31,3 +32,14 @@ def test_check_hemisphere_exceptions():
         check_hemisphere('blah', 10.)
     with pytest.raises(ValueError):
         check_hemisphere(0.,0.)
+
+def test_count_classes():
+    assert count_classes([{'a': 'one','b': 'two'},{'a': 'anotherone', 'b': 'anothertwo'}], 'a') == {'one': 1, 'anotherone': 1}
+    assert count_classes([{'a': 'one','b': 'two'},{'a': 'anotherone', 'b': 'two'}], 'b') == {'two': 2}
+    assert isinstance(count_classes([{'a': 'one'}], 'a'), dict) == True   
+
+def test_count_classes_exceptions():
+    with pytest.raises(KeyError):
+        count_classes([{'b': 'one'},{'a': 'one', 'c': 'three'}], 'a')
+    with pytest.raises(ValueError):
+        count_classes([],'a')    

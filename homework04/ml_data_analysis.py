@@ -92,6 +92,8 @@ def count_classes(meteorite_data: List[dict], key: str) -> dict:
         classes_observed (dict): Dictionary of class counts.
 
     """
+    if len(meteorite_data) == 0:
+        raise(ValueError)
     classes_observed = {}
     for item in meteorite_data:
         if item[key] in classes_observed:
