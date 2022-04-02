@@ -5,6 +5,10 @@
 * Create a Flask application in Python to send and recieve the data stored in the database
 * Query data in a dataset using a Flask application
 
+## Description of Data
+- `Meteorite_Landings.json`: file contains all of the meteorite landing sites as a list of dictionaries where each dictionary contains
+information on the geographic location, mass, and class of the meteorite at the site.
+
 ## Scripts
 1. `app.py`: Contains the Flask routes which the user can use to send and recieve data
     - Contains a `POST` method which loads the meteorite data into a Redis database instance
