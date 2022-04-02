@@ -6,7 +6,7 @@
 * Query data in a dataset using a Flask application
 
 ## Description of Data
-- `Meteorite_Landings.json`: file contains all of the meteorite landing sites as a list of dictionaries where each dictionary contains
+- `Meteorite_Landings.json`: File contains all of the meteorite landing sites as a list of dictionaries where each dictionary contains
 information on the geographic location, mass, and class of the meteorite at the site.
 
 ## Scripts
