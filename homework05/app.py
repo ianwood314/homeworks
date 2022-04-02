@@ -1,18 +1,29 @@
 from flask import Flask, request, jsonify
 import redis
 import json
+from typing import List
 
 app = Flask(__name__)
 
 def get_redis_client():
+    '''
+    Returns the network over which the Flask and Redis containers communicate
+    '''
     return redis.Redis(host='172.17.0.5', port=6379, db=0)
 
-def read_data_from_file():
+def read_data_from_file() -> List[dict]:
+    '''
+    Retrieves the meteorite landings data and returns it at a list of dictionaries
+    '''
     data = json.load(open('Meteorite_Landings.json', 'r'))
     return data['meteorite_landings']
 
 @app.route('/data', methods=['GET','POST'])
 def data():
+    '''
+    Loads the data into the Redis container if the method requested by the user is POST, or returns the data from 
+    the dataset if the method requested is GET
+    '''
     rd = get_redis_client()
     if request.method == 'GET':
         data = []
