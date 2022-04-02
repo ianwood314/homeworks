@@ -70,7 +70,7 @@ The three types of acceptable commands to interact with this application are bel
       [ianwood@isp02 homework05]$ curl localhost:5038/data -X POST
         -- Successfully uploaded data --
       ```
-      From the example output above, we can see that the dataset was successfully loaded into the Redis container.
+      - From the example output above, we can see that the dataset was successfully loaded into the Redis container.
   2. `curl localhost:<your flask port number>/data -X GET` to output all of the data in the dataset
       - Example:
       ```
@@ -97,7 +97,7 @@ The three types of acceptable commands to interact with this application are bel
         }
       ]
       ```
-      From the example output above, we can see all the entries in the dataset in JSON format
+      - From the example output above, we can see all the entries in the dataset in JSON format
   3. `localhost:<your flask port number>/data?start=<starting index> -X GET` to query only a subset of the data in the dataset, 
       where <starting index> is the index of the data entry you would like to start at.
       - Example:
@@ -124,4 +124,4 @@ The three types of acceptable commands to interact with this application are bel
         }
       ]
       ```
-      From the example output above, we can see the data entries in the dataset starting from index 28 to the end of the dataset.
+      - From the example output above, we can see the data entries in the dataset starting from index 28 to the end of the dataset.
