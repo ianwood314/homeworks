@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ianwood-test-redis-deployment
+  labels:
+    username: ianwood
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ianwood-test-redis-deployment
+  template:
+    metadata:
+      labels:
+        app: ianwood-test-redis-deployment
+        username: ianwood
+        env: test
+    spec:
+      containers:
+        - name: ianwood-test-redis-pod
+          image: redis:6
+          volumeMounts:                
+            - name: ianwood-test-redis-pvc
+              mountPath: "/data"  
+      volumes:
+        - name: ianwood-test-redis-pvc       
+          persistentVolumeClaim:            
+            claimName: ianwood-test-redis-pvc 

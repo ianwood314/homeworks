@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ianwood-test-flask-deployment
+  labels:
+    username: ianwood
+    env: test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ianwood-test-flask-deployment
+  template:
+    metadata:
+      labels:
+        app: ianwood-test-flask-deployment
+        username: ianwood
+        env: test
+    spec:
+      containers:
+        - name: ianwood-test-flask-pod
+          image: ianwood314/meteorite-landings-data:1.1
+          imagePullPolicy: Always
+          env:                    
+            - name: REDIS_IP        
+              value: 10.99.208.61
+          ports:                  
+            - name: http            
+              containerPort: 5000   

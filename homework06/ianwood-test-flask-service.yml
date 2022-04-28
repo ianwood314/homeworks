@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ianwood-test-flask-service
+  labels:  
+    username: ianwood
+    env: test
+spec:
+  type: ClusterIP
+  selector:
+    app: ianwood-test-flask-deployment 
+  ports:
+  - name: ianwood-test-flask-service-rport
+    port: 5000
+    targetPort: 5000
