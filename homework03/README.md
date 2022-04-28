@@ -1,4 +1,4 @@
-# Homework03: Water Quality Analysis
+# Water Quality Analysis
 
 ## Homework Objectives
 * Reinforce JSON data extraction and manipulation concepts
